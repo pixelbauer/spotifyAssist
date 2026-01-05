@@ -1,0 +1,19 @@
+{
+  "language": "de",
+  "project_type": "php",
+  "style_guide": "PSR-12",
+  "frameworks": [
+    "Symfony Components",
+    "Doctrine DBAL",
+    "Twig",
+    "Tailwind CSS",
+    "Saloon PHP"
+  ],
+  "test_runner": "PHPUnit",
+  "static_analysis": "PHPStan",
+  "preferred_workflow": "feature-branch",
+  "agents": {
+    "default_model": "claude-sonnet-4-5",
+    "review_model": "claude-opus-4-5"
+  }
+}

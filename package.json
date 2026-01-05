@@ -1,0 +1,26 @@
+{
+  "name": "spotify-assist",
+  "version": "1.0.0",
+  "description": "PHP-Projekt mit Symfony Components, Twig und Tailwind CSS",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/input.css -o ./public/css/output.css --watch",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./public/css/output.css --minify",
+    "test": "php ./vendor/bin/phpunit",
+    "analyse": "php ./vendor/bin/phpstan analyse"
+  },
+  "keywords": [
+    "php",
+    "symfony",
+    "tailwind",
+    "twig"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@context7/mcp-server": "latest",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  }
+}
