@@ -1,0 +1,40 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}{{ title }} - Spotify Assist{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        {{ message }}
+    </h1>
+    <p class="text-xl text-gray-600 mb-8">
+        Deine persönliche Spotify-Verwaltung
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-green-600 text-4xl mb-4">🎵</div>
+            <h3 class="text-xl font-semibold mb-2">Musik suchen</h3>
+            <p class="text-gray-600">Durchsuche die Spotify-Bibliothek nach deinen Lieblingssongs</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-green-600 text-4xl mb-4">📋</div>
+            <h3 class="text-xl font-semibold mb-2">Playlists verwalten</h3>
+            <p class="text-gray-600">Erstelle und organisiere deine Playlists</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-green-600 text-4xl mb-4">📊</div>
+            <h3 class="text-xl font-semibold mb-2">Statistiken</h3>
+            <p class="text-gray-600">Analysiere deine Hörgewohnheiten</p>
+        </div>
+    </div>
+
+    <div class="mt-12">
+        <a href="/spotify/search" class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+            Jetzt starten
+        </a>
+    </div>
+</div>
+{% endblock %}

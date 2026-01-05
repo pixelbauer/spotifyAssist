@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}{{ title }} - Spotify Assist{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Spotify Suche</h1>
+
+    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <form method="get" action="/spotify/search">
+            <div class="flex gap-4">
+                <input
+                    type="text"
+                    name="q"
+                    value="{{ query|default('') }}"
+                    placeholder="Nach Songs, Künstlern oder Alben suchen..."
+                    class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                />
+                <button
+                    type="submit"
+                    class="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                >
+                    Suchen
+                </button>
+            </div>
+        </form>
+    </div>
+
+    {% if query is defined %}
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-4">Suchergebnisse für "{{ query }}"</h2>
+
+            {% if results is empty %}
+                <p class="text-gray-600">
+                    Keine Ergebnisse gefunden. Stelle sicher, dass deine Spotify API-Credentials konfiguriert sind.
+                </p>
+            {% else %}
+                <div class="space-y-4">
+                    {# Hier würden die Suchergebnisse angezeigt werden #}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
