@@ -1,0 +1,43 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Dependencies
+vendor/
+node_modules/
+
+# Build
+/public/css/
+/public/js/
+/dist/
+/build/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+.phpunit.result.cache
+/coverage/
+
+# Logs
+*.log
+/var/log/
+
+# Cache
+/var/cache/
+.phpstan.cache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
